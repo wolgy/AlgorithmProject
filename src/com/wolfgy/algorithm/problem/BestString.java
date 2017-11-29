@@ -5,15 +5,17 @@ package com.wolfgy.algorithm.problem;
  * 1. any two adjacent letter aren't the same. </br >
  * 2. the new string have the biggest length. </br >
  * 3. the new string have the biggest lexicographical ordering.</br >
- * Input</br >
+ * </br >
+ * Input:</br >
  * The input consists of multiple test cases. Each test case contain a string, the string is consist of 'a'~'z', 'A' - 'Z' and '0' - '9'. the length of string is not exceed 500.</br >
- * Output</br >
+ * Output:</br >
  * For each case, print the new string.</br >
- * Sample Input</br >
+ * </br >
+ * Sample Input:</br >
  * 2</br >
  * abaa</br >
  * 001</br >
- * Sample Output</br >
+ * Sample Output:</br >
  * aba</br >
  * 010</br >
  */
