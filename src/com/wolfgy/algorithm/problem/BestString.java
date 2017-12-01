@@ -21,7 +21,16 @@ package com.wolfgy.algorithm.problem;
  */
 public class BestString {
 
-	public String handle(String input){
+	public static void main(String[] args) {
+		String input = "abavsbcddab";
+		BestString bestString = new BestString();
+		String output = bestString.handle(input);
+		System.out.println("BestString:"+output);
+	}
+	
+	
+	
+	private String handle(String input){
 		char[] characters = input.toCharArray();
 		characters = permutationWithDictionary(characters);//对数组进行字典排序获取最大序列
 		//保证相邻字符不相同
@@ -48,7 +57,7 @@ public class BestString {
 	}
 	
 	//获取字典排序的最大序列
-	public  char[] permutationWithDictionary(char[] characters){
+	private  char[] permutationWithDictionary(char[] characters){
 		while(true){
 			for (int i = characters.length-1; i >=0; i--) {
 				for (int j = 0; j < i; j++) {

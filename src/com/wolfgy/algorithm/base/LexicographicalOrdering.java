@@ -5,6 +5,15 @@ import java.util.Arrays;
  * 字典排序
  */
 public class LexicographicalOrdering {
+	
+	public static void main(String[] args) {
+		LexicographicalOrdering lexicographicalOrdering = new LexicographicalOrdering();
+		char[] result = lexicographicalOrdering.PermutationWithDictionary(new char[]{'1','a','d'});
+		for (int i = 0; i < result.length; i++) {
+			System.out.println("result["+i+"]:"+result[i]);
+		}
+	}
+	
 	public  char[] PermutationWithDictionary(char chs[])
     {
         Arrays.sort(chs);
@@ -41,7 +50,7 @@ public class LexicographicalOrdering {
                 System.out.println("逆序排列后："+chs.toString());
         }       
     }
-    public static void Reverse(char chs[],int i)
+    private static void Reverse(char chs[],int i)
     {
         int k=i,j=chs.length-1;
         while(k<j)
@@ -52,7 +61,7 @@ public class LexicographicalOrdering {
         }
     }
 
-    public static void Swap(char chs[],int i,int j)
+    private static void Swap(char chs[],int i,int j)
     {
         char temp;
         temp=chs[i];

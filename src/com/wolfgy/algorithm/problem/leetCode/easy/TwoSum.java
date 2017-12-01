@@ -1,4 +1,4 @@
-package com.wolfgy.algorithm.problem;
+package com.wolfgy.algorithm.problem.leetCode.easy;
 /**
  *Given an array of integers, return indices of the two numbers such that they add up to a specific target.</br >
  *You may assume that each input would have exactly one solution, and you may not use the same element twice.</br >
@@ -10,7 +10,14 @@ package com.wolfgy.algorithm.problem;
  */
 public class TwoSum {
 
-    public int[] twoSum(int[] nums, int target) {
+	public static void main(String[] args) {
+		TwoSum twoSum = new TwoSum();
+		int[] out = twoSum.twoSum(new int[]{3,2,4}, 6);
+		System.out.println(out);
+	}
+	
+	
+    private int[] twoSum(int[] nums, int target) {
     	
     	int[] indices =new int[2];
     	for (int i = 0; i < nums.length; i++) {
