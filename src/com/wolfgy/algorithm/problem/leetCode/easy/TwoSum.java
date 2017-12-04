@@ -16,7 +16,19 @@ public class TwoSum {
 		System.out.println(out);
 	}
 	
-	
+	/**
+	 * 
+	 * <p>
+	 * Description:我自己的解决方案<br />
+	 * 耗时：39ms
+	 * </p>
+	 * @author wugy
+	 * @version 0.1 2017年12月4日
+	 * @param nums
+	 * @param target
+	 * @return
+	 * int[]
+	 */
     private int[] twoSum(int[] nums, int target) {
     	
     	int[] indices =new int[2];
@@ -31,5 +43,31 @@ public class TwoSum {
 		}
 		return null;
        
+    }
+    
+    /**
+     * 
+     * <p>
+     * Description:截至此刻leetCode上的最优解<br />
+     * 耗时：3ms
+     * </p>
+     * @version 0.1 2017年12月4日
+     * @param nums
+     * @param target
+     * @return
+     * int[]
+     */
+    private int[] bestTwoSum(int[] nums, int target) {
+        int[] map = new int[20050];
+        int size = 4;
+        for (int i = 0; i < nums.length; i++) {
+            map[nums[i] + size] = (i + 1);
+            int diff = target - nums[i + 1] + size;
+            if (diff < 0) continue;
+            int d = map[diff];
+            if (d > 0)
+                return new int[]{d - 1, i + 1};
+        }
+        return null;
     }
 }
