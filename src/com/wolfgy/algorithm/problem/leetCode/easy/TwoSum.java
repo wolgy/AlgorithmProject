@@ -12,6 +12,7 @@ import java.util.Map;
  *Because nums[0] + nums[1] = 2 + 7 = 9,</br >
  *return [0, 1].</br >
  */
+@SuppressWarnings("unused")
 public class TwoSum {
 
 	public static void main(String[] args) {
@@ -37,7 +38,7 @@ public class TwoSum {
 	 * @return
 	 * int[]
 	 */
-    private int[] twoSum_1_0(int[] nums, int target) {
+	private int[] twoSum_1_0(int[] nums, int target) {
     	
     	int[] indices =new int[2];
     	for (int i = 0; i < nums.length; i++) {

@@ -17,6 +17,7 @@ package com.wolfgy.algorithm.problem.leetCode.medium;
  * @author wugy
  * @version 0.1 2017年12月4日
  */
+@SuppressWarnings("unused")
 public class AddTwoNumbers {
 
 	public static void main(String[] args) {
