@@ -81,7 +81,7 @@ public class AddTwoNumbers {
      * @return
      * ListNode
      */
-    public ListNode bestAddTwoNumbers(ListNode l1, ListNode l2) {
+    private ListNode bestAddTwoNumbers(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null)
             return null;
         
