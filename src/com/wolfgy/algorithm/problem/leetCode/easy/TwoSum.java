@@ -28,8 +28,8 @@ public class TwoSum {
 	/**
 	 * 
 	 * <p>
-	 * Description:我自己的第一个解决方案<br />
-	 * 耗时：39ms
+	 * Description:The first solution of me.<br />
+	 * Runtime:39ms
 	 * </p>
 	 * @author wugy
 	 * @version 0.1 2017年12月4日
@@ -57,8 +57,8 @@ public class TwoSum {
     /**
      * 
      * <p>
-     * Description:研究过别人代码以后的第二个改进版本<br />
-     * 耗时：9ms
+     * Description:The second improved version after studying other people's solutions.<br />
+     * Runtime:9ms
      * </p>
      * @author wugy
      * @version 1.1 2017年12月6日
@@ -83,8 +83,8 @@ public class TwoSum {
     /**
      * 
      * <p>
-     * Description:研究过别人代码以后的第一个改进版本<br />
-     * 耗时：9ms
+     * Description:The first improved version after studying other people's solutions.<br />
+     * Runtime:9ms
      * </p>
      * @author wugy
      * @version 1.1 2017年12月6日
@@ -113,10 +113,10 @@ public class TwoSum {
     /**
      * 
      * <p>
-     * Description:截至此刻leetCode上的最优解<br />
-     * 耗时：3ms<br />
+     * Description:The best solution on LeetCode by this time.<br />
+     * Runtime:3ms<br />
      * </p>
-     * 已发现2个无法通过的TestCase:<br />
+     * I found that this solution would never pass the following two test cases.So I marked this solution deprecated here.<br />
      * 1.Input:[2222222,2222222],4444444;Output:[0,1]<br />
      * 2.Input:[-9,4,9,90],0;Output:[0,2]<br />
      * @deprecated
@@ -127,7 +127,7 @@ public class TwoSum {
      * int[]
      */
     private int[] bestTwoSum(int[] nums, int target) {
-        int[] map = new int[20050];//完全无法理解为什么数组长度为20050。这种做法如果传入的数组中有比20050更大的值就挂了。已向leetCode提交TestCase
+        int[] map = new int[20050];
         int size = 4;
         for (int i = 0; i < nums.length; i++) {
             map[nums[i] + size] = (i + 1);
