@@ -27,10 +27,11 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	 * 5. input:"au"		expected output:2
 	 * 6. input:"bbbbb"		expected output:1
 	 * 7. input:"aa"		expected output:1
+	 * 8. input:"cdd"		expected output:2
 	 */
 	public static void main(String[] args) {
 		LongestSubstringWithoutRepeatingCharacters longestSubstringWithoutRepeatingCharacters = new LongestSubstringWithoutRepeatingCharacters();
-		int maxLength = longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring_1_1("ohvhjdml");
+		int maxLength = longestSubstringWithoutRepeatingCharacters.lengthOfLongestSubstring_1_1("cdd");
 		System.out.println("result:"+maxLength);
 	}
 		
@@ -85,9 +86,11 @@ public class LongestSubstringWithoutRepeatingCharacters {
 	 * 
 	 * <p>
 	 * Description:The first improved version after studying other people's solutions.<br />
+	 * Runtime:36ms<br />
+	 * Beats:99.94% of java submissions.<br />
 	 * </p>
 	 * @author wugy
-	 * @version 0.1 2017年12月8日
+	 * @version 0.1 2017年12月11日
 	 * @param str
 	 * @return
 	 * int
@@ -101,19 +104,18 @@ public class LongestSubstringWithoutRepeatingCharacters {
 		if (chars.length<2) {
 			return chars.length;
 		}
-		int maxLength = 0,spliter = 0,cur_len = 1;
-		for (int i = 0; i < chars.length; i++) {
+		int maxLength = 0,spliter = 0;
+		for (int i = 1; i < chars.length; i++) {
 			for (int j = spliter ; j < i ; j++) {
 				if (chars[i]==chars[j]) {
+					int tempLength = i-spliter;
+					maxLength = maxLength > tempLength ? maxLength : tempLength;
 					spliter = j+1;
-					maxLength = maxLength>i-spliter+1 ? maxLength : i-spliter+1;
 					break;
 				}
 			}
 		}
-		if (spliter==0) {
-			maxLength = maxLength > chars.length-spliter ? maxLength : chars.length-spliter;
-		}
+		maxLength = maxLength > chars.length-spliter ? maxLength : chars.length-spliter;
 		return maxLength;
 	}
 	
